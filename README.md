@@ -12,7 +12,7 @@ Making a CRUD ( Create, Read, Update, Delete ), where it connects to SQL or NoSQ
 	 - Author
 	 - ISBN
 	 - Published Year
-	 - ( Opitional ) Publishing Entity
+	 - ( Opitional ) Editing Entity
 ## Technical Requiriments
  - Latest version of Typescript
  - Any type of Database
