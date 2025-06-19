@@ -12,18 +12,29 @@ datasource db {
 }
 
 model Book {
-  id              String          @id @default(uuid())
+  id              String              @id @default(uuid())
   title           String
   author          String
-  isbn            String          @unique
+  isbn            String              @unique
   publishedYear   Int
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-  editingEntities EditingEntity[] @relation("BookEditingEntities")
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  editingEntities BookEditingEntity[]
 }
 
 model EditingEntity {
-  id    String @id @default(uuid())
+  id    String              @id @default(uuid())
   name  String
-  books Book[] @relation("BookEditingEntities")
+  books BookEditingEntity[]
+}
+
+model BookEditingEntity {
+  book            Book          @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  bookId          String
+  editingEntity   EditingEntity @relation(fields: [editingEntityId], references: [id], onDelete: Cascade)
+  editingEntityId String
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@id([bookId, editingEntityId])
 }
