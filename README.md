@@ -7,7 +7,7 @@ Below will have a checkbox for each challenge on each phase, following the patte
     Title of what is being studied - Name of the challenge - Name of the branch
 
  1. Phase One
-	 - [ ] Typescript - Library Crud - phase1-library-crud
+	 - [X] Typescript - Library Crud - phase1-library-crud
 	 - [ ] Domain Driven Design ( DDD ) - ??? - ???
 	 - [ ] Low Code Development - ??? - ???
 	 - [ ] Phase One Final Tech Challenge - ???
