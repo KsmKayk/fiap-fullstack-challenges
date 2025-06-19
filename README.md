@@ -96,6 +96,7 @@ POST /editing-entities
 
 ## Observations
 
+- I've used Insomnia to test the API, the Requests export is the file InsomniaRequests.json.
 - All endpoints returns JSON.
 - If you provide both `editingEntityId` and `editingEntityName` when creating a book, the `editingEntityId` will be checked. If it exists, it will check if the `editingEntityName` matches the existing entity. If it does not match, it will return an error.
 - If you provide an `editingEntityId` that does not exist, it will return an error.
